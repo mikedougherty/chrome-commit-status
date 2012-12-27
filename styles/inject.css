@@ -1,0 +1,11 @@
+[data-commit-status=success] {
+    background-color: #B1FF9C;
+}
+
+[data-commit-status=pending] {
+    background-color: #FFF691;
+}
+
+[data-commit-status=failure] {
+    background-color: #FF9E9E;
+}
