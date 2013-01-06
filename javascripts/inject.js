@@ -1,4 +1,9 @@
 $(function() {
+    // Attempt to detect github, bail if not found
+    if ($('head').attr('prefix').match(/githubog:/) === null) {
+        return;
+    }
+
     var setStatus = function(sha, state) {
         $('[data-commit-id="' + sha + '"]').attr('data-commit-status', state);
     };

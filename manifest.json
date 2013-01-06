@@ -17,10 +17,8 @@
     "content_scripts": [
         {
             "matches": [
-                "http://*.github.com/*",
-                "https://*.github.com/*",
-                "http://*.github.tagged.com/*",
-                "https://*.github.tagged.com/*"
+                "http://*/*",
+                "https://*/*"
             ],
             "css": [
                 "styles/inject.css"
