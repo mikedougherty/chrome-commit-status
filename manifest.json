@@ -5,15 +5,10 @@
     "description": "Displays commit status of SHAs on GitHub",
     "browser_action": {
         "default_icon": "images/icon.png",
-        "default_title": "GitHub Commit Status",
-        "default_popup": "popup.html"
+        "default_title": "GitHub Commit Status"
     },
     "content_security_policy": "default-src 'self' ",
     "minimum_chrome_version": "14.0.835.202",
-    "options_page": "options.html",
-    "background": {
-            "page": "background.html"
-    },
     "content_scripts": [
         {
             "matches": [
