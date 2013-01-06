@@ -3,6 +3,12 @@ $(function() {
         $('[data-commit-id="' + sha + '"]').attr('data-commit-status', state);
     };
 
+    var processShaElement = function(element, sha) {
+        element.attr('data-commit-id', sha);
+        setStatus(sha, 'unknown');
+        return sha;
+    };
+
     var pageOwner = function() {
         var match = /^\/(.+?)(?:\/.*)*$/.exec(URI(document.location).pathname());
         if (match !== null) {
@@ -46,17 +52,13 @@ $(function() {
             if (sha.length === 0) {
                 sha = $(el, '.sha');
             }
-            sha.attr('data-commit-id', match[1]);
-            setStatus(match[1], 'unknown');
-            return match[1];
+            return processShaElement($(sha), match[1]);
         }
     }));
     shas = shas.concat(_.map($('.sha-block .sha'), function(el) {
         var text = $(el).text();
         if (/[0-9a-f]{40}/.exec(text)) {
-            $(el).attr('data-commit-id', text);
-            setStatus(match[1], 'unknown');
-            return text;
+            return processShaElement($(el), text);
         }
     }));
     shas = _.unique(_.compact(shas));
