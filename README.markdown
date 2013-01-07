@@ -10,5 +10,4 @@ As far as I know, there's only one place to view the CI status of a commit on gi
 Notes:
  * Everything is very rudimentary- literally the very least amount I could do to get this in a working state. Forks & pull requests welcome!
  * I don't know if this will work on private repositories when logged in; I assume the user's cookies take effect when making the API request.
- * Supports enterprise (this is in fact my primary use case), but I don't know the correct way to allow users to specify what domains the extension has access to (see issue #1)
- * This is my first chrome extension, so it was cloned from https://github.com/alvincrespo/Chrome-Extensions-Boilerplate and has unnecessary stuff in v0.1
+ * Supports enterprise (this is in fact my primary use case), but needs permission for all websites for this to work
