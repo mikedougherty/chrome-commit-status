@@ -120,7 +120,7 @@ $(function() {
         }
     });
 
-    var link_selector = 'a.sha-block, a.sha, .commit-links a.gobutton';
+    var link_selector = 'a.sha-block, a.sha, .commit-links a.gobutton, .commit-meta a';
     var link_handler = function (evt) {
         var el = $(evt.srcElement);
         var href = el.attr('href');
