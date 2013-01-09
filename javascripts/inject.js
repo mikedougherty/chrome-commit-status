@@ -1,6 +1,9 @@
 $(function() {
     // Attempt to detect github, bail if not found
-    if ($('head').attr('prefix').match(/githubog:/) === null) {
+    var github = $('head');
+    github = github ? github.attr('prefix') : false;
+    github = github ? github.match(/githubog:/) : false;
+    if (!github) {
         return;
     }
 
